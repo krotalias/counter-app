@@ -245,9 +245,14 @@ class App extends React.Component {
    * @function
    */
   handleInsert = () => {
-    let maxId = this.state.maxId + 1;
-    const counters = [...this.state.counters, { id: maxId, value: 0 }];
-    this.setState({ counters, maxId });
+    // let maxId = this.state.maxId + 1;
+    // const counters = [...this.state.counters, { id: maxId, value: 0 }];
+    // this.setState({ counters, maxId });
+
+    this.setState((state) => ({
+      counters: [...state.counters, { id: state.maxId + 1, value: 0 }],
+      maxId: state.maxId + 1,
+    }));
   };
 
   /**
