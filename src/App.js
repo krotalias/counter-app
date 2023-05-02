@@ -101,8 +101,15 @@ import Counters from "./components/counters";
  * These methods are then passed to its children via props.
  *
  * @extends {React.Component}
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
  */
 class App extends React.Component {
+  /**
+   * Number of counters.
+   * @type {Number}
+   */
+  ncounters = 4;
+
   /**
    * <ul>
    *    <li>Set up the initial state of the application: a set of four counters</li>
@@ -135,13 +142,11 @@ class App extends React.Component {
      * @property {state_setter} state.setState setter - change state.
      */
     this.state = {
-      counters: [
-        { id: 1, value: 0 },
-        { id: 2, value: 0 },
-        { id: 3, value: 0 },
-        { id: 4, value: 0 },
-      ],
-      maxId: 4,
+      counters: Array.from({ length: this.ncounters }, (_, index) => ({
+        id: index + 1,
+        value: 0,
+      })),
+      maxId: this.ncounters,
     };
   }
 
