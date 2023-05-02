@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: registerServiceWorker.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: registerServiceWorker.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file
+ *
+ * Summary.
+ * &lt;p>In production, we register a service worker to serve assets from local cache.&lt;/p>
+ *
+ * This lets the app load faster on subsequent visits in production, and gives
+ * it offline capabilities. &lt;br>
+ * However, it also means that developers (and users)
+ * will only see deployed updates on the "N+1" visit to a page, &lt;br>
+ * since previously cached resources are updated in the background.
+ *
+ * &lt;p>To learn more about the benefits of this model, read about {@link https://create-react-app.dev/docs/making-a-progressive-web-app/ PWA}.&lt;br>
+ * This link also includes instructions on opting out of this behavior.&lt;/p>
+ * @see &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers, MDN&lt;/a>
+ * @see &lt;a href="https://developers.google.com/web/fundamentals/primers/service-workers/">Service Workers, Google Web Fundamentals&lt;/a>
+ * @see &lt;a href="https://www.smashingmagazine.com/2016/02/making-a-service-worker/">Server worker: A case study, Smashing Magazine&lt;/a>
+ * @see &lt;a href="https://css-tricks.com/serviceworker-for-offline/">Simple offline site using service worker, CSS Tricks&lt;/a>
+ * @see &lt;a href="https://github.com/facebook/create-react-app/blob/main/packages/cra-template/template/README.md">Getting Started with Create React App&lt;/a>
+ * @see &lt;a href="https://www.npmjs.com/package/register-service-worker">npm&lt;/a>
+ */
+const isLocalhost = Boolean(
+  window.location.hostname === "localhost" ||
+    // [::1] is the IPv6 localhost address.
+    window.location.hostname === "[::1]" ||
+    // 127.0.0.1/8 is considered localhost for IPv4.
+    window.location.hostname.match(
+      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+    )
+);
+
+export default function register() {
+  if (process.env.NODE_ENV === "production" &amp;&amp; "serviceWorker" in navigator) {
+    // The URL constructor is available in all browsers that support SW.
+    const publicUrl = new URL(process.env.PUBLIC_URL, window.location);
+    if (publicUrl.origin !== window.location.origin) {
+      // Our service worker won't work if PUBLIC_URL is on a different origin
+      // from what our page is served on. This might happen if a CDN is used to
+      // serve assets; see https://github.com/facebookincubator/create-react-app/issues/2374
+      return;
+    }
+
+    window.addEventListener("load", () => {
+      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+
+      if (isLocalhost) {
+        // This is running on localhost. Lets check if a service worker still exists or not.
+        checkValidServiceWorker(swUrl);
+
+        // Add some additional logging to localhost, pointing developers to the
+        // service worker/PWA documentation.
+        navigator.serviceWorker.ready.then(() => {
+          console.log(
+            "This web app is being served cache-first by a service " +
+              "worker. To learn more, visit https://goo.gl/SC7cgQ"
+          );
+        });
+      } else {
+        // Is not local host. Just register service worker
+        registerValidSW(swUrl);
+      }
+    });
+  }
+}
+
+function registerValidSW(swUrl) {
+  navigator.serviceWorker
+    .register(swUrl)
+    .then((registration) => {
+      registration.onupdatefound = () => {
+        const installingWorker = registration.installing;
+        installingWorker.onstatechange = () => {
+          if (installingWorker.state === "installed") {
+            if (navigator.serviceWorker.controller) {
+              // At this point, the old content will have been purged and
+              // the fresh content will have been added to the cache.
+              // It's the perfect time to display a "New content is
+              // available; please refresh." message in your web app.
+              console.log("New content is available; please refresh.");
+            } else {
+              // At this point, everything has been precached.
+              // It's the perfect time to display a
+              // "Content is cached for offline use." message.
+              console.log("Content is cached for offline use.");
+            }
+          }
+        };
+      };
+    })
+    .catch((error) => {
+      console.error("Error during service worker registration:", error);
+    });
+}
+
+function checkValidServiceWorker(swUrl) {
+  // Check if the service worker can be found. If it can't reload the page.
+  fetch(swUrl)
+    .then((response) => {
+      // Ensure service worker exists, and that we really are getting a JS file.
+      if (
+        response.status === 404 ||
+        response.headers.get("content-type").indexOf("javascript") === -1
+      ) {
+        // No service worker found. Probably a different app. Reload the page.
+        navigator.serviceWorker.ready.then((registration) => {
+          registration.unregister().then(() => {
+            window.location.reload();
+          });
+        });
+      } else {
+        // Service worker found. Proceed as normal.
+        registerValidSW(swUrl);
+      }
+    })
+    .catch(() => {
+      console.log(
+        "No internet connection found. App is running in offline mode."
+      );
+    });
+}
+
+export function unregister() {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.ready.then((registration) => {
+      registration.unregister();
+    });
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="App.html">App</a></li><li><a href="Counter.html">Counter</a></li><li><a href="Counters.html">Counters</a></li></ul><h3>Global</h3><ul><li><a href="global.html#NavBar">NavBar</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Tue May 02 2023 10:21:08 GMT-0300 (Brasilia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
