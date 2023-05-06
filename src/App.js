@@ -57,7 +57,8 @@
  *    <li>npx babel --watch src --out-dir . --presets react-app/prod &</li>
  *  </ul>
  *
- *  <li>To run the version with modules and Node.js version {@link https://nodejs.org/en/blog/release/v16.16.0 16}:</li>
+ *  <li>To run the version with modules and Node.js version {@link https://nodejs.org/en/blog/release/v16.16.0 16}
+ *  or {@link https://nodejs.org/en/blog/release/v18.16.0 18}:</li>
  *  <ul>
  *    <li>cd counter-app</li>
  *    <li>{@link https://www.npmjs.com npm} or {@link https://yarnpkg.com yarn} install</li>
@@ -70,8 +71,9 @@
  * @since 08/10/2021
  * @see <a href="../src/App.js">source</a>
  * @see <a href="../package.json">package.json</a>
- * @see <a href="/cwdc/14-react/counter/counter.html">link</a>
+ * @see <a href="/cwdc/14-react/counter/counter.html">link browser</a>
  * @see <a href="/cwdc/14-react/counter/counter2.html">link production</a>
+ * @see <a href="https://counter-app-wine-omega.vercel.app">link vercel</a>
  * @see <a href="http://localhost:3000">link node</a>
  * @see https://create-react-app.dev
  * @see https://dev.to/lowla/create-react-app-with-a-previous-version-of-react-4g03
