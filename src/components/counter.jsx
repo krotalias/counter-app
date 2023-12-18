@@ -10,8 +10,7 @@
  * @author Paulo Roma
  * @since 08/10/2021
  * @see <a href="../src/components/counter.jsx">source</a>
- * @see <a href="../components/counter.js">source Babel</a>
- * @see <a href="/cwdc/14-react/counter/counter.html">link</a>
+ * @see <a href="https://counter-app-wine-omega.vercel.app">link</a>
  */
 
 import React, { Component } from "react";
@@ -74,7 +73,7 @@ class Counter extends React.Component {
     /**
      * Use bootstrap's <a href="/cwdc/5-bootstrap/5.3.html">grid system</a>
      * to build layouts: one row and two columns.
-     *
+     * @memberof React.Component
      * @return {HTMLDivElement} a badge, plus an increment, a decrement, and a delete button.
      * @see https://getbootstrap.com/docs/5.0/layout/grid/
      * @see https://getbootstrap.com/docs/5.0/utilities/spacing/

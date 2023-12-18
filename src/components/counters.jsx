@@ -11,8 +11,7 @@
  * @author Paulo Roma
  * @since 08/10/2021
  * @see <a href="../src/components/counters.jsx">source</a>
- * @see <a href="../components/counters.js">source Babel</a>
- * @see <a href="/cwdc/14-react/counter/counter.html">link</a>
+ * @see <a href="https://counter-app-wine-omega.vercel.app">link</a>
  */
 
 import React, { Component } from "react";
@@ -53,7 +52,7 @@ class Counters extends React.Component {
      *
      * This is useful when using dialog boxes to allow the consumer of that component
      * to pass content to be rendered on the dialog box.
-     *
+     * @memberof React.Component
      * @return {HTMLDivElement} a reset button plus a number of Counter components.
      */
     render() {

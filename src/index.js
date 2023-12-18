@@ -15,12 +15,20 @@
  */
 
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import "fontawesome-4.7";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+/**
+ * Create a root to display React components inside a browser DOM node.
+ * After you’ve created a root, you need to call root.render to display a React component inside of it.
+ * @method createRoot
+ * @memberof external:react-dom
+ * @see https://react.dev/reference/react-dom/client/createRoot
+ */
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
 registerServiceWorker();

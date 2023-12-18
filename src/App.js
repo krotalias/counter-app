@@ -71,8 +71,8 @@
  * @since 08/10/2021
  * @see <a href="../src/App.js">source</a>
  * @see <a href="../package.json">package.json</a>
- * @see <a href="/cwdc/14-react/counter/counter.html">link browser</a>
- * @see <a href="/cwdc/14-react/counter/counter2.html">link production</a>
+ * @see <a href="https://krotalias.github.io/cwdc/14-react/counter/counter.html">link browser</a>
+ * @see <a href="https://krotalias.github.io/cwdc/14-react/counter/counter2.html">link production</a>
  * @see <a href="https://counter-app-wine-omega.vercel.app">link vercel</a>
  * @see <a href="http://localhost:3000">link node</a>
  * @see https://create-react-app.dev
@@ -83,13 +83,48 @@
  * @see https://github.com/fishstick22/mastering-react-mosh
  * @see https://medium.com/swlh/modern-react-development-but-without-200-mb-of-node-modules-69d8ca01eacf
  * @see https://ustechportal.com/error-error-0308010c-digital-envelope-routines-unsupported/
- * @see <img src="../counter.png" width="256">
+ * @see <iframe width="700" height="512" src="https://counter-app-wine-omega.vercel.app"></iframe>
  */
 
 import React, { Component } from "react";
 import "./App.css";
 import NavBar from "./components/navbar";
 import Counters from "./components/counters";
+
+/**
+ * React module.
+ * @external react
+ * @see https://legacy.reactjs.org/docs/react-api.html
+ */
+
+/**
+ * React DOM module.
+ * @external react-dom
+ * @see https://legacy.reactjs.org/docs/react-dom.html
+ */
+
+/**
+ * Create React App is a comfortable environment for learning React,
+ * and is the best way to start building a new single-page application in React.
+ * It sets up your development environment so that you can use the latest JavaScript features,
+ * provides a nice developer experience, and optimizes your app for production.
+ * @class React
+ * @memberof external:react
+ * @see https://legacy.reactjs.org/docs/create-a-new-react-app.html
+ */
+
+/**
+ * React lets you define components as classes or functions.
+ * Components defined as classes currently provide more features which are described in detail on this page.
+ * To define a React component class, you need to extend React.Component.
+ *
+ * <p>The only method you must define in a React.Component subclass is called render().
+ * All the other methods described on this page are optional.</p>
+ * @class React.Component
+ * @memberof React
+ * @see https://legacy.reactjs.org/docs/react-component.html
+ * @see https://react.dev/reference/react/Component
+ */
 
 /**
  * <p>A single source of truth for our interface.</p>
@@ -259,7 +294,7 @@ class App extends React.Component {
 
   /**
    * Creates a Navbar to totalize the number of counters being used.
-   *
+   * @memberof React.Component
    * @returns {React.Fragment} a react fragment with a Navbar and a Counters component.
    * @see <a href="../doc-counter/Counters.html"> Counters component </a>
    * @see <a href="../doc-counter/global.html#NavBar"> NavBar component </a>

@@ -10,11 +10,11 @@
  * @author Paulo Roma
  * @since 08/10/2021
  * @see <a href="../src/components/navbar.jsx">source</a>
- * @see <a href="../components/navbar.js">source Babel</a>
  */
 
 import React from "react";
 import logo from "../logo.svg";
+import vercel from "../vercel.png";
 import Boot_logo from "../Bootstrap_logo.svg";
 
 /**
@@ -38,6 +38,9 @@ const NavBar = ({ totalCounters }) => {
             </div>
             <a href="https://react.dev">
                 <img src={logo} style={{ height: "48px" }} alt="logo" />
+            </a>
+            <a href="https://vercel.com/krotalias/counter-app">
+                <img src={vercel} style={{ height: "48px" }} alt="vercel" />
             </a>
             <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">
                 <img src={Boot_logo} style={{ height: "48px" }} alt="logo" />
