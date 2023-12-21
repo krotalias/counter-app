@@ -6,7 +6,7 @@
  * for counting items implemented with
  * {@link https://codewithmosh.com/p/mastering-react|React}.</p>
  *
- * React is a lightweight library for building fast and interactive user interfaces.
+ * {@link https://react.dev React} is a lightweight library for building fast and interactive user interfaces.
  * Unlike {@link https://angular.io Angular}, which is a framework (or a complete solution), React is essentially a ‘view library’.
  * It only takes care of the view or what is rendered in the DOM.
  * It doesn’t have an opinion about other aspects of an app such as routing, calling HTTP services, etc.
@@ -53,8 +53,8 @@
  *  and save the "compiled" output when the source has changed:</li>
  *  <ul>
  *    <li>npm init -y</li>
- *    <li>npm install babel-cli@6 babel-preset-react-app@3</li>
- *    <li>npx babel --watch src --out-dir . --presets react-app/prod &</li>
+ *    <li>npm install --save-dev @babel/core @babel/cli @babel/preset-react</li>
+ *    <li>npx babel --watch src --out-dir . --presets @babel/preset-react &</li>
  *  </ul>
  *
  *  <li>To run the version with modules and Node.js version {@link https://nodejs.org/en/blog/release/v16.16.0 16}
