@@ -37,7 +37,12 @@ const NavBar = ({ totalCounters }) => {
                 </span>
             </div>
             <a href="https://react.dev">
-                <img src={logo} style={{ height: "48px" }} alt="logo" />
+                <img
+                    className="App-logo"
+                    src={logo}
+                    style={{ height: "48px" }}
+                    alt="logo"
+                />
             </a>
             <a href="https://vercel.com/krotalias/counter-app">
                 <img src={vercel} style={{ height: "48px" }} alt="vercel" />
