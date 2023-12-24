@@ -64,6 +64,16 @@
  *    <li>{@link https://www.npmjs.com npm} or {@link https://yarnpkg.com yarn} install</li>
  *    <li>{@link https://www.npmjs.com/package/react npm} or {@link https://yarnpkg.com/package/react yarn} start</li>
  *  </ul>
+ *
+ *  <li>To use vercel {@link https://vercel.com/docs/cli cli} to run
+ *  vercel {@link https://vercel.com/docs/cli/dev dev} before deploying:</li>
+ *  <ul>
+ *    <li>cd counter-app</li>
+ *    <li>{@link https://pnpm.io pnpm} i -g vercel or
+ *        {@link https://pnpm.io pnpm} i -g vercel@latest (to update to the latest version)</li>
+ *    <li>{@link https://www.npmjs.com npm} or {@link https://yarnpkg.com yarn} install</li>
+ *    <li>{@link https://vercel.com vercel} dev</li>
+ *  </ul>
  * </ul>
  *
  * @author {@link https://codewithmosh.com|Mosh Hamedani}
