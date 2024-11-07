@@ -24,40 +24,40 @@ import Boot_logo from "../Bootstrap_logo.svg";
  * just totalCounters.
  *
  * @return {HTMLElement} a &lt;nav&gt; tag with the total of non-zero counters.
- * @see https://getbootstrap.com/docs/4.6/components/navbar/
- * @see https://getbootstrap.com/docs/4.6/components/badge/
+ * @see {@link https://getbootstrap.com/docs/5.0/components/navbar/ Navbar}
+ * @see {@link https://getbootstrap.com/docs/5.0/components/badge/ Badges}
  */
 const NavBar = ({ totalCounters }) => {
-    return (
-        <nav className="navbar navbar-light bg-light">
-            <div style={{ fontSize: "32px" }}>
-                {" Total "}
-                <span className="badge badge-pill badge-secondary">
-                    {totalCounters}
-                </span>
-            </div>
-            <a href="https://react.dev">
-                <img
-                    className="App-logo"
-                    src={logo}
-                    style={{ height: "48px" }}
-                    alt="logo"
-                />
-            </a>
-            <a href="https://vercel.com/krotalias/counter-app">
-                <img src={vercel} style={{ height: "48px" }} alt="vercel" />
-            </a>
-            <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">
-                <img src={Boot_logo} style={{ height: "48px" }} alt="logo" />
-            </a>
-            <a
-                className="navbar-brand"
-                href="https://www.youtube.com/watch?v=Ke90Tje7VS0"
-            >
-                Watch: "React for Beginners"
-            </a>
-        </nav>
-    );
+  return (
+    <nav className="navbar navbar-light bg-light">
+      <div style={{ fontSize: "32px" }}>
+        {" Total "}
+        <span className="badge badge-pill badge-secondary">
+          {totalCounters}
+        </span>
+      </div>
+      <a href="https://react.dev">
+        <img
+          className="App-logo"
+          src={logo}
+          style={{ height: "48px" }}
+          alt="logo"
+        />
+      </a>
+      <a href="https://vercel.com/krotalias/counter-app">
+        <img src={vercel} style={{ height: "48px" }} alt="vercel" />
+      </a>
+      <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">
+        <img src={Boot_logo} style={{ height: "48px" }} alt="logo" />
+      </a>
+      <a
+        className="navbar-brand"
+        href="https://www.youtube.com/watch?v=Ke90Tje7VS0"
+      >
+        Watch: "React for Beginners"
+      </a>
+    </nav>
+  );
 };
 
 export default NavBar;

@@ -85,18 +85,15 @@
  * @see <a href="https://krotalias.github.io/cwdc/14-react/counter/counter2.html">link production</a>
  * @see <a href="https://counter-app-wine-omega.vercel.app">link vercel</a>
  * @see <a href="http://localhost:3000">link node</a>
- * @see https://create-react-app.dev
- * @see https://dev.to/lowla/create-react-app-with-a-previous-version-of-react-4g03
- * @see https://reactjs.org/docs/react-dom.html
- * @see https://reactjs.org/docs/react-api.html#createelement
- * @see https://learn2torials.com/a/react-state-and-props
- * @see https://github.com/fishstick22/mastering-react-mosh
- * @see https://medium.com/swlh/modern-react-development-but-without-200-mb-of-node-modules-69d8ca01eacf
- * @see https://ustechportal.com/error-error-0308010c-digital-envelope-routines-unsupported/
+ * @see {@link https://reactjs.org/docs/react-api.html#createelement createElement()}
+ * @see {@link https://learn2torials.com/a/react-state-and-props React State and Props}
+ * @see {@link https://github.com/fishstick22/mastering-react-mosh mastering-react-mosh}
+ * @see {@link https://medium.com/swlh/modern-react-development-but-without-200-mb-of-node-modules-69d8ca01eacf Modern React Development But Without 200+ MB of Node Modules}
+ * @see {@link https://ustechportal.com/error-error-0308010c-digital-envelope-routines-unsupported/ Error:Error:0308010c:Digital Envelope Routines::Unsupported}
  * @see <iframe width="700" height="512" src="https://counter-app-wine-omega.vercel.app"></iframe>
  */
 
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import NavBar from "./components/navbar";
 import Counters from "./components/counters";
@@ -104,13 +101,13 @@ import Counters from "./components/counters";
 /**
  * React module.
  * @external react
- * @see https://legacy.reactjs.org/docs/react-api.html
+ * @see {@link https://legacy.reactjs.org/docs/react-api.html React Top-Level API}
  */
 
 /**
  * React DOM module.
  * @external react-dom
- * @see https://legacy.reactjs.org/docs/react-dom.html
+ * @see {@link https://legacy.reactjs.org/docs/react-dom.html ReactDOM}
  */
 
 /**
@@ -118,9 +115,8 @@ import Counters from "./components/counters";
  * and is the best way to start building a new single-page application in React.
  * It sets up your development environment so that you can use the latest JavaScript features,
  * provides a nice developer experience, and optimizes your app for production.
- * @class React
- * @memberof external:react
- * @see https://legacy.reactjs.org/docs/create-a-new-react-app.html
+ * @namespace React
+ * @see {@link https://legacy.reactjs.org/docs/create-a-new-react-app.html Create a New React App}
  */
 
 /**
@@ -132,8 +128,8 @@ import Counters from "./components/counters";
  * All the other methods described on this page are optional.</p>
  * @class React.Component
  * @memberof React
- * @see https://legacy.reactjs.org/docs/react-component.html
- * @see https://react.dev/reference/react/Component
+ * @see {@link https://legacy.reactjs.org/docs/react-component.html React Top-Level API}
+ * @see {@link https://react.dev/reference/react/Component Component}
  */
 
 /**
@@ -148,7 +144,9 @@ import Counters from "./components/counters";
  * These methods are then passed to its children via props.
  *
  * @extends {React.Component}
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields Public class fields}
+ * @see {@link https://reactjs.org/docs/react-component.html React.Component}
+ * @see {@link https://www.digitalocean.com/community/tutorials/react-constructors-with-react-components Understanding Constructors with React Components}
  */
 class App extends React.Component {
   /**
@@ -168,9 +166,6 @@ class App extends React.Component {
    * </ul>
    *
    * @param {Object} props component input.
-   * @extends {React.Component<Props>}
-   * @see https://reactjs.org/docs/react-component.html
-   * @see https://www.digitalocean.com/community/tutorials/react-constructors-with-react-components
    */
   constructor(props) {
     super(props);
@@ -235,8 +230,8 @@ class App extends React.Component {
      * When you call {@link https://react.dev/reference/react/useState setState} in a component,
      * React automatically updates the child components inside of it too.
      * @callback state_setter
-     * @see https://www.geeksforgeeks.org/reactjs-setstate/
-     * @see https://dev.to/johnstonlogan/react-hooks-barney-style-1hk7
+     * @see {@link https://www.geeksforgeeks.org/reactjs-setstate/ ReactJS setState()}
+     * @see {@link https://dev.to/johnstonlogan/react-hooks-barney-style-1hk7 useState() vs setState() - Strings, Objects, and Arrays}
      */
     this.setState({ counters });
   };
@@ -290,6 +285,8 @@ class App extends React.Component {
    * In fact, we buid a new array, add another counter, and update the state.
    *
    * @function
+   * @see {@link https://legacy.reactjs.org/docs/state-and-lifecycle.html State and Lifecycle}
+   * @see {@link https://www.robinwieruch.de/react-state-array-add-update-remove/ How to manage React State with Arrays}
    */
   handleInsert = () => {
     // let maxId = this.state.maxId + 1;
@@ -304,13 +301,12 @@ class App extends React.Component {
 
   /**
    * Creates a Navbar to totalize the number of counters being used.
-   * @memberof React.Component
    * @returns {React.Fragment} a react fragment with a Navbar and a Counters component.
    * @see <a href="../doc-counter/Counters.html"> Counters component </a>
    * @see <a href="../doc-counter/global.html#NavBar"> NavBar component </a>
-   * @see https://reactjs.org/docs/fragments.html
-   * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
-   * @see https://getbootstrap.com/docs/4.0/components/navbar/#placement
+   * @see {@link https://reactjs.org/docs/fragments.html Fragments}
+   * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main &lt;main&gt;: The Main element}
+   * @see {@link https://getbootstrap.com/docs/4.0/components/navbar/#placement Placement}
    */
   render() {
     return (
