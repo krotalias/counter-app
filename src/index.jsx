@@ -10,7 +10,7 @@
  * @author {@link https://codewithmosh.com|Mosh Hamedani}
  * @author Paulo Roma
  * @since 08/10/2021
- * @see <a href="../src/index.js">source</a>
+ * @see <a href="../src/index.jsx">source</a>
  * @see https://github.com/fishstick22/mastering-react-mosh
  */
 

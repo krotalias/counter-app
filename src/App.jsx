@@ -1,38 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>JSDoc: Source: App.js</title>
-
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
-
-<body>
-
-<div id="main">
-
-    <h1 class="page-title">Source: App.js</h1>
-
-    
-
-
-
-    
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
+/**
  * @file
  *
  * Summary.
- * &lt;p>An interface based on {@link https://getbootstrap.com/docs/4.6/getting-started/introduction/ Bootstrap 4.6}
+ * <p>An interface based on {@link https://getbootstrap.com/docs/4.6/getting-started/introduction/ Bootstrap 4.6}
  * for counting items implemented with
- * {@link https://codewithmosh.com/p/mastering-react|React}.&lt;/p>
+ * {@link https://codewithmosh.com/p/mastering-react|React}.</p>
  *
  * {@link https://react.dev React} is a lightweight library for building fast and interactive user interfaces.
  * Unlike {@link https://angular.io Angular}, which is a framework (or a complete solution), React is essentially a ‘view library’.
@@ -41,84 +13,86 @@
  * For those concerns, you need to use other libraries.
  * This means you get the freedom to choose the libraries that you’re familiar with or prefer.
  *
- * &lt;p>This project was bootstrapped with
- * {@link https://github.com/facebookincubator/create-react-app Create React App}:&lt;/p>
- * &lt;ul>
- *    &lt;li>yarn create react-app counter-app&lt;/li>
- * &lt;/ul>
+ * <p>This project was bootstrapped with
+ * {@link https://vite.dev/guide/ Vite}:</p>
+ * <ul>
+ *    <li>npm create vite@latest</li>
+ * </ul>
  *
- * &lt;p>&lt;b>Important remark&lt;/b>: using React without {@link https://nodejs.dev/en/ nodejs}
- * is a great way to try React, but it's not suitable for production.&lt;br>
+ * <p><b>Important remark</b>: using React without {@link https://nodejs.dev/en/ nodejs}
+ * is a great way to try React, but it's not suitable for production.<br>
  * It slowly compiles {@link https://react.dev/learn/javascript-in-jsx-with-curly-braces JSX}
- * with Babel in the browser, and uses a large development build of React.&lt;/p>
+ * with Babel in the browser, and uses a large development build of React.</p>
  *
- * &lt;ul>
- *    &lt;li> Read this {@link  https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project section}
- *    for a production-ready setup with JSX.&lt;/li>
+ * <ul>
+ *    <li> Read this {@link  https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project section}
+ *    for a production-ready setup with JSX.</li>
  *
- *    &lt;li>In a larger project, you can use an
+ *    <li>In a larger project, you can use an
  *    {@link https://reactjs.org/docs/create-a-new-react-app.html integrated toolchain}
- *    that includes JSX instead.&lt;/li>
+ *    that includes JSX instead.</li>
  *
- *    &lt;li>You can also use React {@link https://reactjs.org/docs/react-without-jsx.html without JSX},
- *    in which case you can remove Babel.&lt;/li>
+ *    <li>You can also use React {@link https://reactjs.org/docs/react-without-jsx.html without JSX},
+ *    in which case you can remove Babel.</li>
  *
- *    &lt;li>Or even use a {@link https://www.copycat.dev/blog/reactjs-cdn/ CDN} to
- *    make your life incredibly easier, by avoiding messing around with the React ecosystem.&lt;/li>
- * &lt;/ul>
+ *    <li>Or even use a {@link https://www.copycat.dev/blog/reactjs-cdn/ CDN} to
+ *    make your life incredibly easier, by avoiding messing around with the React ecosystem.</li>
+ * </ul>
  *
  * Finally, when an application is ready for the world,
  * it must be {@link https://create-react-app.dev/docs/deployment/ deployed} somehow.
  *
- * &lt;p>Usage: &lt;/p>
- * &lt;ul>
- *  &lt;li>To install jsdoc and yarn:&lt;/li>
- *  &lt;ul>
- *    &lt;li>sudo npm install --global yarn&lt;/li>
- *    &lt;li>sudo npm install -g jsdoc&lt;/li>
- *  &lt;/ul>
- *  &lt;li>To run react in the browser, then run {@link https://babeljs.io Babel} on the fly,
- *  and save the "compiled" output when the source has changed:&lt;/li>
- *  &lt;ul>
- *    &lt;li>npm init -y&lt;/li>
- *    &lt;li>npm install --save-dev @babel/core @babel/cli @babel/preset-react&lt;/li>
- *    &lt;li>npx babel --watch src --out-dir . --presets @babel/preset-react &amp;&lt;/li>
- *  &lt;/ul>
+ * <p>Usage: </p>
+ * <ul>
+ *  <li>To install jsdoc and yarn:</li>
+ *  <ul>
+ *    <li>sudo npm install --global yarn</li>
+ *    <li>sudo npm install -g jsdoc</li>
+ *  </ul>
+ *  <li>To run react in the browser, then run {@link https://babeljs.io Babel} on the fly,
+ *  and save the "compiled" output when the source has changed:</li>
+ *  <ul>
+ *    <li>npm init -y</li>
+ *    <li>npm install --save-dev @babel/core @babel/cli @babel/preset-react</li>
+ *    <li>npx babel --watch src --out-dir . --presets @babel/preset-react &</li>
+ *  </ul>
  *
- *  &lt;li>To run the version with modules and Node.js version {@link https://nodejs.org/en/blog/release/v16.16.0 16}
- *  or {@link https://nodejs.org/en/blog/release/v18.16.0 18}:&lt;/li>
- *  &lt;ul>
- *    &lt;li>cd counter-app&lt;/li>
- *    &lt;li>{@link https://www.npmjs.com npm} or {@link https://yarnpkg.com yarn} install&lt;/li>
- *    &lt;li>{@link https://www.npmjs.com/package/react npm} or {@link https://yarnpkg.com/package/react yarn} start&lt;/li>
- *  &lt;/ul>
+ *  <li>To run the version with modules and Node.js version
+ *  {@link https://nodejs.org/en/blog/release/v18.19.0 18},
+ *  {@link https://nodejs.org/en/blog/release/v20.18.0 20} or
+ *  {@link https://nodejs.org/en/blog/release/v22.11.0 22}:</li>
+ *  <ul>
+ *    <li>cd counter-app</li>
+ *    <li>{@link https://www.npmjs.com npm} or {@link https://yarnpkg.com yarn} install</li>
+ *    <li>{@link https://www.npmjs.com/package/react npm} or {@link https://yarnpkg.com/package/react yarn} start</li>
+ *  </ul>
  *
- *  &lt;li>To use vercel {@link https://vercel.com/docs/cli cli} to run
- *  vercel {@link https://vercel.com/docs/cli/dev dev} before deploying:&lt;/li>
- *  &lt;ul>
- *    &lt;li>cd counter-app&lt;/li>
- *    &lt;li>{@link https://pnpm.io pnpm} i -g vercel or
- *        {@link https://pnpm.io pnpm} i -g vercel@latest (to update to the latest version)&lt;/li>
- *    &lt;li>{@link https://www.npmjs.com npm} or {@link https://yarnpkg.com yarn} install&lt;/li>
- *    &lt;li>{@link https://vercel.com vercel} dev&lt;/li>
- *  &lt;/ul>
- * &lt;/ul>
+ *  <li>To use vercel {@link https://vercel.com/docs/cli cli} to run
+ *  vercel {@link https://vercel.com/docs/cli/dev dev} before deploying:</li>
+ *  <ul>
+ *    <li>cd counter-app</li>
+ *    <li>{@link https://pnpm.io pnpm} i -g vercel or
+ *        {@link https://pnpm.io pnpm} i -g vercel@latest (to update to the latest version)</li>
+ *    <li>{@link https://www.npmjs.com npm} or {@link https://yarnpkg.com yarn} install</li>
+ *    <li>{@link https://vercel.com vercel} dev</li>
+ *  </ul>
+ * </ul>
  *
  * @author {@link https://codewithmosh.com|Mosh Hamedani}
  * @author Paulo Roma
  * @since 08/10/2021
- * @see &lt;a href="../src/App.js">source&lt;/a>
- * @see &lt;a href="../package.json">package.json&lt;/a>
- * @see &lt;a href="https://krotalias.github.io/cwdc/14-react/counter/counter.html">link browser&lt;/a>
- * @see &lt;a href="https://krotalias.github.io/cwdc/14-react/counter/counter2.html">link production&lt;/a>
- * @see &lt;a href="https://counter-app-wine-omega.vercel.app">link vercel&lt;/a>
- * @see &lt;a href="http://localhost:3000">link node&lt;/a>
+ * @see <a href="../src/App.jsx">source</a>
+ * @see <a href="../package.json">package.json</a>
+ * @see <a href="https://krotalias.github.io/cwdc/14-react/counter/counter.html">link browser</a>
+ * @see <a href="https://krotalias.github.io/cwdc/14-react/counter/counter2.html">link production</a>
+ * @see <a href="https://counter-app-wine-omega.vercel.app">link vercel</a>
+ * @see <a href="http://localhost:3000">link node</a>
  * @see {@link https://reactjs.org/docs/react-api.html#createelement createElement()}
  * @see {@link https://learn2torials.com/a/react-state-and-props React State and Props}
  * @see {@link https://github.com/fishstick22/mastering-react-mosh mastering-react-mosh}
  * @see {@link https://medium.com/swlh/modern-react-development-but-without-200-mb-of-node-modules-69d8ca01eacf Modern React Development But Without 200+ MB of Node Modules}
  * @see {@link https://ustechportal.com/error-error-0308010c-digital-envelope-routines-unsupported/ Error:Error:0308010c:Digital Envelope Routines::Unsupported}
- * @see &lt;iframe width="700" height="512" src="https://counter-app-wine-omega.vercel.app">&lt;/iframe>
+ * @see <iframe width="700" height="512" src="https://counter-app-wine-omega.vercel.app"></iframe>
  */
 
 import React from "react";
@@ -152,8 +126,8 @@ import Counters from "./components/counters";
  * Components defined as classes currently provide more features which are described in detail on this page.
  * To define a React component class, you need to extend React.Component.
  *
- * &lt;p>The only method you must define in a React.Component subclass is called render().
- * All the other methods described on this page are optional.&lt;/p>
+ * <p>The only method you must define in a React.Component subclass is called render().
+ * All the other methods described on this page are optional.</p>
  * @class React.Component
  * @memberof React
  * @see {@link https://legacy.reactjs.org/docs/react-component.html React Top-Level API}
@@ -161,9 +135,9 @@ import Counters from "./components/counters";
  */
 
 /**
- * &lt;p>A single source of truth for our interface.&lt;/p>
+ * <p>A single source of truth for our interface.</p>
  *
- * &lt;p>The component that owns a piece of the state, should be the one modifying it.&lt;/p>
+ * <p>The component that owns a piece of the state, should be the one modifying it.</p>
  *
  * App is the parent of both the NavBar and Counters components,
  * so the counters array information can be passed as a prop to its children.
@@ -184,14 +158,14 @@ class App extends React.Component {
   ncounters = 4;
 
   /**
-   * &lt;ul>
-   *    &lt;li>Set up the initial state of the application: a set of four counters&lt;/li>
-   *  &lt;/ul>
-   * &lt;p>Conceptually, components are like JavaScript functions:&lt;/p>
-   * &lt;ul>
-   *    &lt;li>They accept arbitrary inputs (called “props”) and &lt;/li>
-   *    &lt;li>return React elements describing what should appear on the screen.&lt;/li>
-   * &lt;/ul>
+   * <ul>
+   *    <li>Set up the initial state of the application: a set of four counters</li>
+   *  </ul>
+   * <p>Conceptually, components are like JavaScript functions:</p>
+   * <ul>
+   *    <li>They accept arbitrary inputs (called “props”) and </li>
+   *    <li>return React elements describing what should appear on the screen.</li>
+   * </ul>
    *
    * @param {Object} props component input.
    */
@@ -200,14 +174,14 @@ class App extends React.Component {
     console.log("App constructor: props", this.props);
 
     /**
-     * &lt;p>The state of the application.&lt;/p>
+     * <p>The state of the application.</p>
      * React components have a built-in state object which is private to the component.
-     * &lt;ul>
-     *  &lt;li>State can not be accessed from outside the class.&lt;/li>
-     *  &lt;li>However, it can be passed as an argument to another component.&lt;/li>
-     * &lt;/ul>
+     * <ul>
+     *  <li>State can not be accessed from outside the class.</li>
+     *  <li>However, it can be passed as an argument to another component.</li>
+     * </ul>
      * @type {Object}
-     * @property {Array&lt;Object&lt;id:Number,value:Number>>} state.counters array of counter objects.
+     * @property {Array<Object<id:Number,value:Number>>} state.counters array of counter objects.
      * @property {Number} maxId maximum Id value used so far.
      * @property {state_setter} state.setState setter - change state.
      */
@@ -221,19 +195,19 @@ class App extends React.Component {
   }
 
   /**
-   * &lt;p>Update the state property to increment a given counter.&lt;/p>
+   * <p>Update the state property to increment a given counter.</p>
    *
-   * Remember that arrow functions do not rebind this keyword, instead they inherit it.&lt;br>
+   * Remember that arrow functions do not rebind this keyword, instead they inherit it.<br>
    * Also to change the state, we must use setState inherited from the base Component,
    * to update the view, and bring the DOM in sync with the virtual DOM.
    *
-   * &lt;p>Therefore, this.state.counters[indexOf(counter)].value++ will not work.
-   * It is necessary to create a new object and pass it to setState.&lt;/p>
+   * <p>Therefore, this.state.counters[indexOf(counter)].value++ will not work.
+   * It is necessary to create a new object and pass it to setState.</p>
    *
    * The setState will schedule an asynchronous call to the {@link App#render|render} method, which will
    * return a new react element at some point in the future.
    *
-   * @param {Object&lt;id:Number,value:Number>} counter selected counter object.
+   * @param {Object<id:Number,value:Number>} counter selected counter object.
    * @function
    */
   handleIncrement = (counter) => {
@@ -245,8 +219,8 @@ class App extends React.Component {
     counters[index].value++;
 
     /**
-     * &lt;p>Add the new configuration (a new set of counters) to {@link App#state state}.&lt;/p>
-     * &lt;pre>
+     * <p>Add the new configuration (a new set of counters) to {@link App#state state}.</p>
+     * <pre>
      * counters: Array
      * [
      *    {id: 1, value: 3},
@@ -254,7 +228,7 @@ class App extends React.Component {
      *    {id: 3, value: 7},
      *    {id: 4, value: 0}
      * ] (4) = $2
-     * &lt;/pre>
+     * </pre>
      * When you call {@link https://react.dev/reference/react/useState setState} in a component,
      * React automatically updates the child components inside of it too.
      * @callback state_setter
@@ -265,9 +239,9 @@ class App extends React.Component {
   };
 
   /**
-   * &lt;p>Update the state property to decrement a given counter.&lt;/p>
+   * <p>Update the state property to decrement a given counter.</p>
    *
-   * @param {Object&lt;id:Number,value:Number>} counter selected counter object.
+   * @param {Object<id:Number,value:Number>} counter selected counter object.
    * @function
    */
   handleDecrement = (counter) => {
@@ -280,9 +254,9 @@ class App extends React.Component {
   };
 
   /**
-   * &lt;p>Update the state property to reset all counters to zero.&lt;/p>
+   * <p>Update the state property to reset all counters to zero.</p>
    *
-   * @param {Object&lt;id:Number,value:Number>} counter selected counter object.
+   * @param {Object<id:Number,value:Number>} counter selected counter object.
    * @function
    */
   handleReset = () => {
@@ -294,7 +268,7 @@ class App extends React.Component {
   };
 
   /**
-   * &lt;p>Update the state property to delete a given counter.&lt;/p>
+   * <p>Update the state property to delete a given counter.</p>
    *
    * In fact, we buid a new array without the deleted one and update the state.
    *
@@ -308,7 +282,7 @@ class App extends React.Component {
   };
 
   /**
-   * &lt;p>Update the state property to insert a new counter.&lt;/p>
+   * <p>Update the state property to insert a new counter.</p>
    *
    * In fact, we buid a new array, add another counter, and update the state.
    *
@@ -330,22 +304,22 @@ class App extends React.Component {
   /**
    * Creates a Navbar to totalize the number of counters being used.
    * @returns {React.Fragment} a react fragment with a Navbar and a Counters component.
-   * @see &lt;a href="../doc-counter/Counters.html"> Counters component &lt;/a>
-   * @see &lt;a href="../doc-counter/global.html#NavBar"> NavBar component &lt;/a>
+   * @see <a href="../doc-counter/Counters.html"> Counters component </a>
+   * @see <a href="../doc-counter/global.html#NavBar"> NavBar component </a>
    * @see {@link https://reactjs.org/docs/fragments.html Fragments}
-   * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main &amp;lt;main&amp;gt;: The Main element}
+   * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main &lt;main&gt;: The Main element}
    * @see {@link https://getbootstrap.com/docs/4.0/components/navbar/#placement Placement}
    */
   render() {
     return (
-      &lt;React.Fragment>
-        &lt;NavBar
+      <React.Fragment>
+        <NavBar
           totalCounters={this.state.counters.filter((c) => c.value > 0).length}
         />
 
-        &lt;main role="main" className="container-fluid bg-antique">
-          &lt;div className="counters">
-            &lt;Counters
+        <main role="main" className="container-fluid bg-antique">
+          <div className="counters">
+            <Counters
               // pass 6 props to Counters (props are read only)
               counters={this.state.counters}
               onReset={this.handleReset}
@@ -354,34 +328,11 @@ class App extends React.Component {
               onDelete={this.handleDelete}
               onInsert={this.handleInsert}
             />
-          &lt;/div>
-        &lt;/main>
-      &lt;/React.Fragment>
+          </div>
+        </main>
+      </React.Fragment>
     );
   }
 }
 
 export default App;
-</code></pre>
-        </article>
-    </section>
-
-
-
-
-</div>
-
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Externals</h3><ul><li><a href="external-react.html">react</a></li><li><a href="external-react-dom.html">react-dom</a></li></ul><h3>Namespaces</h3><ul><li><a href="React.html">React</a></li></ul><h3>Classes</h3><ul><li><a href="App.html">App</a></li><li><a href="Counter.html">Counter</a></li><li><a href="Counters.html">Counters</a></li><li><a href="React.Component.html">Component</a></li></ul><h3>Global</h3><ul><li><a href="global.html#NavBar">NavBar</a></li></ul>
-</nav>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Thu Nov 07 2024 08:38:06 GMT-0300 (Brasilia Standard Time)
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
-</body>
-</html>
