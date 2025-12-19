@@ -44,7 +44,7 @@ const NavBar = ({ totalCounters }) => {
           alt="logo"
         />
       </a>
-      <a href="https://vercel.com/krotalias/counter-app">
+      <a href="https://vercel.com/krotalias-projects/counter-app">
         <img src={vercel} style={{ height: "48px" }} alt="vercel" />
       </a>
       <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">
