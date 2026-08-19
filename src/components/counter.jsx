@@ -73,8 +73,8 @@ class Counter extends React.Component {
    * Use bootstrap's <a href="/cwdc/5-bootstrap/5.3.html">grid system</a>
    * to build layouts: one row and two columns.
    * @return {React.JSX.Element} a badge, plus an increment, a decrement, and a delete button.
-   * @see {@link https://getbootstrap.com/docs/4.6/layout/grid/ Grid system}
-   * @see {@link https://getbootstrap.com/docs/4.6/utilities/spacing/ Spacing}
+   * @see {@link https://getbootstrap.com/docs/5.3/layout/grid/ Grid system}
+   * @see {@link https://getbootstrap.com/docs/5.3/utilities/spacing/ Spacing}
    * @see {@link https://www.bitdegree.org/learn/horizontal-grid Step by Step Tutorial for Creating a Perfect Horizontal Grid}
    * @see {@link https://icons.getbootstrap.com/icons/trash/ Trash}
    * @see {@link https://fontawesome.com/v4/icons/ The Icons}
@@ -128,7 +128,8 @@ class Counter extends React.Component {
    * @returns {String} the class for setting the color of this counter badge.
    */
   getBadgeClasses() {
-    let classes = "badge m-2 badge-";
+    // let classes = "badge m-2 badge-";
+    let classes = "badge m-2 bg-";
     classes += this.props.counter.value === 0 ? "warning" : "primary";
     return classes;
   }

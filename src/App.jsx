@@ -2,7 +2,7 @@
  * @file
  *
  * Summary.
- * <p>An interface based on {@link https://getbootstrap.com/docs/4.6/getting-started/introduction/ Bootstrap 4.6}
+ * <p>An interface based on {@link https://getbootstrap.com/docs/5.3/getting-started/introduction/ Bootstrap 5.3}
  * for counting items implemented with
  * {@link https://codewithmosh.com/p/mastering-react|React}.</p>
  *
